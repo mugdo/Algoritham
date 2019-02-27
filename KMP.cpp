@@ -14,40 +14,33 @@ int main()
 
     for(int i=0,j=1;j<sp;j++)
     {
-
-        //cout<<"p[i]="<<p[i]<<" p[j]="<<p[j]<<endl;
         if(p[i]==p[j])
         {
             ind[j]=i+1;
             i++;
-            //cout<<"ind[j]="<<ind[j]<<endl;
         }
         else
         {
-            //cout<<"*i="<<i<<endl;
              if(i>0)
                {
-                j--;
-                }
+                 j--;
+               }
              if(i>0)
-             {
+              {
 
-               i=ind[i-1];
-            }
-            //i=ind[i-1];
-
+                i=ind[i-1];
+             }
         }
-        //cout<<"j="<<j<<" i="<<i<<endl;
 
     }
 
     for(int i=0,j=0;j<st;j++)
     {
-        cout<<"p[i]="<<p[i]<<" t[j]="<<t[j]<<endl;
+        cout<<"p["<<i<<"]="<<p[i]<<" t["<<j<<"]="<<t[j]<<endl;
+        //cout<<"i="<<i<<" j="<<j<<endl;
         if(p[i]==t[j])
         {
             i++;
-            //j++;
             con++;
         }
         else
@@ -60,14 +53,18 @@ int main()
             {
                 i=ind[i-1];
             }
+            cout<<endl;
         }
-        //cout<<"i="<<i<<endl;
       if(i==sp)
       {
-          cout<<j<<endl;
+          cout<<"Matching Position :"<<j-i+1<<endl;
           break;
       }
 
     }
     return 0;
 }
+/*
+abcxabcdabxabcdabcdabcx
+abcdabcx
+*/
