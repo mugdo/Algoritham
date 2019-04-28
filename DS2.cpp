@@ -80,7 +80,15 @@ int main()
   }
 
   EndingPoint=n-1;
-  cout<<BFS(0,0,n)<<endl;
+  if(BFS(0,0,n)==99)
+  {
+
+     cout<<"Frog can cross the river"<<endl;
+  }
+  else
+  {
+    cout<<"Frog can't cross the river"<<endl;
+  }
 
   return 0;
 }
