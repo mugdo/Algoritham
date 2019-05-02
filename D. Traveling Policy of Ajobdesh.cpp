@@ -22,7 +22,7 @@ int BFS(int s,int d)
         for(int i=0;i<vc[fon].size();i++)
         {
             //cout<<"kq1"<<endl;
-            if(vc[fon][i]==0)
+            if(ar[vc[fon][i]]==0)
             {
                 q.push(vc[fon][i]);
                 ar[vc[fon][i]]=1;
@@ -36,10 +36,8 @@ int BFS(int s,int d)
 }
 int main()
 {
-    int t;
-    cin>>t;
     int n,r,c,q;
-    cin>>n>>r>>c>>q;
+    cin>>r;
     int a,b;
 
     for(int i=0;i<r;i++)
@@ -56,10 +54,7 @@ int main()
        int temp=0;
        int sorce,distace;
        cin>>sorce>>distace;
-       //cout<<"ss"<<endl;
-       temp+=BFS(sorce,c);
-       //cout<<"temp="<<temp<<endl;
-       temp+=BFS(c,distace);
+       temp=BFS(sorce,distace);
        cout<<temp<<endl;
    }
 
